@@ -29,6 +29,7 @@ select:focus {
 }
 
 body {
+  padding-top: 8rem;
   font-family: "Lato", sans-serif;
 }
 h1 {
@@ -65,4 +66,254 @@ ul,
 ol {
   list-style-type: none;
 }
+::placeholder {
+  /*check browser-support*/
+  color: #707479;
+}
 /*end reset*/
+
+/*start header*/
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  z-index: 9999;
+}
+header {
+  background-color: #ffffff;
+  color: rgba(250, 249, 249, 0.8);
+  font-size: 1.8rem;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #ececec;
+  padding: 0.3rem 0;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.navigation {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+header .navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navigation li a {
+  text-transform: uppercase;
+  color: rgba(31, 29, 29, 0.8);
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  line-height: 6rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 0 16px;
+  transition: color 0.3s;
+}
+.navigation li a:hover {
+  color: rgb(182, 175, 175);
+}
+
+header form {
+  position: relative;
+}
+header input {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.2rem 0.5rem 1rem;
+  border-radius: 1.3rem;
+  border: unset;
+  margin-left: 1rem;
+  background-color: rgba(248, 241, 241, 0.8);
+  color: #8ea8c3;
+  font-size: 1rem;
+  font-style: italic;
+}
+.navigation .fa {
+  color: #cacdce;
+  font-size: 1.4rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1rem;
+}
+header .fa-search {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+/*end header*/
+
+/*start general container-content style*/
+.content {
+  display: flex;
+  align-items: stretch;
+}
+
+aside {
+  width: 25rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+main {
+  flex: 1;
+  margin: 2rem 3rem;
+  /*background-color: rgba(248, 241, 241, 0.8);*/
+}
+
+.sticky {
+  background-color: #ffffff;
+  color: #2b2922;
+  padding: 1rem;
+  box-shadow: 0 5px 20px rgba(199, 196, 196, 0.5);
+  position: sticky;
+  top: 10rem;
+  border-radius: 5px;
+}
+
+aside .avatar img {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  height: auto;
+}
+aside p.description {
+  font-size: 1.2rem;
+  position: relative;
+  font-family: "Open Sans";
+  color: rgba(31, 29, 29, 0.8);
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+aside p.description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.25),
+    transparent
+  );
+}
+aside p.description span {
+  font-style: italic;
+}
+
+.button .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  min-height: 4rem;
+  position: relative;
+  background-color: rgba(248, 241, 241, 0.8);
+  margin: 1.5rem auto;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  border: 1px #ccc solid;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #333;
+}
+.button .btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30rem;
+  height: 5rem;
+  background-color: rgba(167, 155, 155, 0.4);
+  transform: rotate(45deg);
+  left: 50%;
+  top: 0;
+}
+.button .btn:hover::before {
+  left: -150%;
+  transition: left 0.8s ease-out;
+}
+ul.social.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 5px;
+}
+ul.social.media li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 6px 4px 6px;
+  font-size: 1.5rem;
+  color: rgba(87, 83, 83, 0.8);
+  transition: color 0.3s;
+}
+aside .sticky .fa-facebook-square:hover {
+  color: #3b5998;
+}
+aside .sticky .fa-twitter-square:hover {
+  color: #4099ff;
+}
+aside .sticky .fa-instagram:hover {
+  color: #e4405f;
+}
+aside .sticky .fa-pinterest:hover {
+  color: #bd081c;
+}
+/*end general container-content style*/
+
+/*start photos-post style*/
+.main-content .brand a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+article {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 5px 20px rgba(199, 196, 196, 0.5);
+  border-radius: 7px;
+}
+article img {
+  width: 20%;
+  height: 20%;
+}
+/*end article-post style*/
+
+/*.main-content h1 {
+  font-family: Scriptina, "Great Vibes", cursive;
+  color: #0000 transparent;
+  text-align: center;
+  font-size: 42px;
+  line-height: 1em;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}*/

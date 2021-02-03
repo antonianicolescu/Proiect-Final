@@ -3,13 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curs 5</title>
+    <title>Photography-Atlas of places</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container">
+        <div class="navigation">
+          <ul>
+            <li>
+              <a href="#">About Me</a>
+            </li>
+            <li>
+              <a href="#">Portofolio</a>
+            </li>
+            <li>
+              <a href="#">Collaborations</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <form action="index.html" method="GET" autocomplete="off">
+            <input
+              type="search"
+              id="topSearch"
+              name="s"
+              placeholder="Search..."
+            />
+            <i class="fa fa-search"></i>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="container content">
+      <aside>
+        <div class="sticky">
+          <div class="avatar">
+            <img
+              src="img/photographer_resized.jpg"
+              alt="camera photo"
+              class="img-responsive"
+            />
+          </div>
+          <p class="description">
+            <span> What I’m good for:</span> Photography & visual stuff.
+            <span>Photography genre:</span> Places, experimental photography and
+            other categories related to human subjects.
+          </p>
+
+          <div class="button">
+            <a href="#images" class="btn" id="view work">View My Work</a>
+          </div>
+          <ul class="social media">
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-facebook-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="fa fa-pinterest"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <main>
+        <div class="main-content">
+          <div class="brand">
+            <a href="index.html">
+              <img
+                src="img/Logo (3)resized.jpg"
+                alt="Logo Atlas of Places"
+                class="img-responsive"
+              />
+            </a>
+          </div>
+
+          <!-- start single post -->
+          <article>
+            <div class="photo">
+              <a href="#">
+                <img src="img/photo.jpg" alt="" class="img-responsive" />
+              </a>
+            </div>
+            <div class="description">Descriere</div>
+          </article>
+          <!-- end single post -->
+          <!-- start single post -->
+          <article>
+            <div class="photo">
+              <a href="#">
+                <img src="img/photo.jpg" alt="" class="img-responsive" />
+              </a>
+            </div>
+            <div class="description">Descriere</div>
+          </article>
+          <!-- end single post -->
+          <!-- start single post -->
+          <article>
+            <div class="photo">
+              <a href="#">
+                <img src="img/photo.jpg" alt="" class="img-responsive" />
+              </a>
+            </div>
+            <div class="description">Descriere</div>
+          </article>
+          <!-- end single post -->
+        </div>
+      </main>
+    </div>
+    <footer></footer>
+  </body>
 </html>
