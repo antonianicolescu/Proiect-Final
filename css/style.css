@@ -67,7 +67,6 @@ ol {
   list-style-type: none;
 }
 ::placeholder {
-  /*check browser-support*/
   color: #707479;
 }
 /*end reset*/
@@ -171,7 +170,6 @@ aside {
 main {
   flex: 1;
   margin: 2rem 3rem;
-  /*background-color: rgba(248, 241, 241, 0.8);*/
 }
 
 .sticky {
@@ -188,18 +186,36 @@ aside .avatar img {
   padding: 1rem 1.5rem;
   width: 100%;
   height: auto;
+  border-radius: 20px;
 }
-aside p.description {
-  font-size: 1.2rem;
+
+aside div.icons ul {
+  display: flex;
   position: relative;
-  font-family: "Open Sans";
-  color: rgba(31, 29, 29, 0.8);
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-align: center;
-  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 5px;
 }
-aside p.description::after {
+aside div.icons ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 6px 4px 6px;
+  font-size: 1.5rem;
+}
+
+aside div.icons img {
+  display: inline-block;
+  max-width: 3rem;
+  height: 4rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+aside div.icons img:hover {
+  opacity: 0.5;
+}
+aside div.icons ul::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -213,7 +229,33 @@ aside p.description::after {
     transparent
   );
 }
-aside p.description span {
+
+aside div.description p {
+  font-size: 1.2rem;
+  position: relative;
+  font-family: "Open Sans";
+  color: rgba(31, 29, 29, 0.8);
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+aside .description p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.25),
+    transparent
+  );
+}
+aside .description span {
   font-style: italic;
 }
 
@@ -280,38 +322,42 @@ aside .sticky .fa-pinterest:hover {
 }
 /*end general container-content style*/
 
-/*start photos-post style*/
-.main-content .brand a img {
+/*start main-content*/
+.brand a img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
   padding-bottom: 1rem;
 }
-
-article {
+.main-content {
   display: flex;
   flex: 1;
   background-color: #ffffff;
   padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   box-shadow: 0 5px 20px rgba(199, 196, 196, 0.5);
   border-radius: 7px;
 }
-article div.post {
-  width: 50%;
+article .single-post {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
-
 article .post img {
   display: block;
+  max-width: 100%;
   width: 100%;
-  height: 100%;
+  height: 45rem;
   padding: 2rem;
 }
 article div.header-post {
-  margin: -60px 90px 0;
+  margin: -60px 70px 0;
   background: #ffffff;
   box-shadow: 0 5px 20px rgba(199, 196, 196, 0.5);
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 1rem 0.5rem 1rem 0.5rem;
   z-index: 99;
   position: relative;
@@ -320,7 +366,6 @@ article div.header-post {
 article div.header-post:hover {
   opacity: 0.5;
 }
-
 div.header-post h2 {
   font-family: "Open Sans";
   font-size: 1.5rem;
@@ -331,7 +376,7 @@ div.header-post h2 {
   text-align: center;
   cursor: pointer;
 }
-/*end article-post style*/
+/*end main-content*/
 /*start footer*/
 footer {
   display: block;
