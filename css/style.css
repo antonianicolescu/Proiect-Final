@@ -110,8 +110,9 @@ li.nav-item a:hover {
   color: rgb(182, 175, 175);
 }
 span.navbar-toggler-icon {
-  border: 1px dotted rgb(136, 134, 134);
+  border: 2px dotted rgb(27, 25, 25);
   cursor: pointer;
+  outline: unset;
 }
 /*end header*/
 
